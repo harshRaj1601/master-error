@@ -10,7 +10,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # Configure the API key  # Replace with your actual API key or default value
-genai.configure(api_key="AIzaSyCTWnQG5kmZPPhbeSuflhffWFkLJDgxS9Y")
+genai.configure(api_key="")
 
 # Shared generation configuration
 generation_config = {
