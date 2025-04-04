@@ -1,0 +1,63 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/theme/dracula.min.css">
+    <!-- Base CodeMirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/codemirror.min.js"></script>
+    
+    <!-- Language modes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/mode/ruby/ruby.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3/mode/shell/shell.min.js"></script>
+    
+    
+    <!-- UUID generator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <header>
+            <h1>Master Error</h1>
+        </header>
+        
+        <main>
+            <div class="code-section">
+                <h2>Code Input</h2>
+                <textarea id="code-editor"></textarea>
+                <div class="button-group">
+                    <button id="analyze-btn" class="btn">Analyze Code</button>
+                    <button id="execute-btn" class="btn">Execute Code</button>
+                    <button id="clear-btn" class="btn">Clear History</button>
+                </div>
+            </div>
+            
+            <div class="result-section">
+                <div class="analysis-result">
+                    <h2>Analysis Result</h2>
+                    <div id="analysis-output" class="output-area"></div>
+                </div>
+                
+                <div class="execution-result">
+                    <h2>Execution Results</h2>
+                    <div id="execution-output" class="output-area"></div>
+                </div>
+            </div>
+        </main>
+        
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
