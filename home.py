@@ -3,7 +3,7 @@ import google.generativeai as genai
 from streamlit_monaco import st_monaco
 
 # Configure the API key
-genai.configure(api_key="AIzaSyCTWnQG5kmZPPhbeSuflhffWFkLJDgxS9Y")
+genai.configure(api_key="")
 
 # Shared generation configuration
 generation_config = {
